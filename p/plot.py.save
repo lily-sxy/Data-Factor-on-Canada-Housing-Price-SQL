@@ -1,0 +1,107 @@
+from typing import List, Optional
+import psycopg2 as pg
+
+class Porject:
+    """A simple recommender that can work with data conforming to the schema in
+    schema.sql.
+
+    === Instance Attributes ===
+    dbConnection: Connection to a database of online purchases and product
+        recommendations.
+
+    Representation invariants:
+    - The database to which dbConnection is connected conforms to the schema
+      in schema.sql.
+    """
+
+    def __init__(self) -> None:
+        """Initialize this Recommender, with no database connection yet.
+        """
+        self.db_conn = None
+
+    def connect_db(self, url: str, username: str, pword: str) -> bool:
+        """Connect to the database at url and for username, and set the
+        search_path to "recommender". Return True iff the connection was made
+        successfully.
+
+        >>> rec = Recommender()
+        >>> # This example will make sense if you change the arguments as
+        >>> # appropriate for you.
+        >>> rec.connect_db("csc343h-dianeh", "dianeh", "")
+        True
+        >>> rec.connect_db("test", "postgres", "password") # test doesn't exist
+        False
+        """
+        try:
+            self.db_conn = pg.connect(dbname=url, user=username, password=pword,
+                                      options="-c search_path=recommender")
+        except pg.Error:
+            return False
+
+        return True
+
+    def disconnect_db(self) -> bool:
+        """Return True iff the connection to the database was closed
+        successfully.
+
+        >>> rec = Recommender()
+        >>> # This example will make sense if you change the arguments as
+        >>> # appropriate for you.
+        >>> rec.connect_db("csc343h-dianeh", "dianeh", "")
+        True
+        >>> rec.disconnect_db()
+        True
+        """
+        try:
+            self.db_conn.close()
+        except pg.Error:
+            return False
+
+        return True
+
+    def plot_interest_rate(self) -> Optional[List[int]]:
+        try:
+            #open a cursor to perform database operations
+            cur = self.db_conn.cursor()
+
+            #get housing price index and interest rate
+            cur.execute("select index, rate \n\
+                       interestrt natural left join housingpi;")
+            index = []
+	    rate = []
+            for record in cur:
+                index.append(record[0])
+                
+            cur.close()
+
+    
+            if len(avgpop) == 0:
+                return None
+            if len(avgpop) <= k:
+                return [t[0] for t in avgpop]
+            else:
+                pop_iid = []
+                tie_iid = []
+                bp_avg = avgpop[k-1][1]
+                #when there is a tie, sorted by item id get the smallest
+                for i in range(k-1, len(avgpop)):
+                    #if the score is the same then add iid to tie_iid
+                    if avgpop[i][1] == bp_avg:
+                        tie_iid.append(avgpop[i][0])
+                    #avgpop is sorted by avg
+                    #so once the avg is different,
+                    #which mean the value is smaller than break point,
+                    #we join out of loop
+                    else:
+                        break
+                #sort tie_iid and get the smallest one
+                tie_iid.sort()
+                #get the recommend items
+                for i in range(k):
+                    if i != k-1:
+                        pop_iid.append(avgpop[i][0])
+                    else:
+                        pop_iid.append(tie_iid[0])
+                return pop_iid
+        except pg.Error:
+            return None

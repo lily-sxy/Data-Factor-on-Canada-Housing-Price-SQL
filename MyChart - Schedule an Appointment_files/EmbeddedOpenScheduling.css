@@ -1,0 +1,1084 @@
+/* Copyright 2018-2021 Epic Systems Corporation */
+body.embedded {
+  min-width: 0;
+  width: 700px;
+}
+body.embedded #main {
+  padding: 0;
+}
+body.embedded .stepContainer {
+  background-color: #ffffff;
+}
+
+body.isInside div.setOfStepsContainer,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer {
+  width: auto;
+}
+body.isInside div.setOfStepsContainer .stepContainer,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .stepContainer {
+  height: auto;
+  width: calc(10% - 0.5rem);
+}
+body.isInside div.setOfStepsContainer .stepContainer.offscreen,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .stepContainer.offscreen {
+  max-height: 0;
+}
+body.isInside div.setOfStepsContainer .stepContainer.scrollable,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .stepContainer.scrollable {
+  overflow-y: visible;
+}
+body.isInside div.setOfStepsContainer .stepContainer .openingsData.openingsNoData,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .stepContainer .openingsData.openingsNoData {
+  min-height: 10rem;
+  margin-top: 1.5rem;
+}
+body.isInside div.setOfStepsContainer .stepContainer .scrollTableWrapper,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .stepContainer .scrollTableWrapper {
+  flex: none;
+}
+body.isInside div.setOfStepsContainer .signupContainer,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .signupContainer {
+  width: auto;
+}
+body.isInside div.setOfStepsContainer .signupContainer .signupStepsContainer,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .signupContainer .signupStepsContainer {
+  width: auto;
+}
+body.isInside div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep {
+  width: 9.6%;
+}
+
+div.setOfStepsContainer {
+  background: none;
+  left: 0;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 700px;
+}
+div.setOfStepsContainer > .slider {
+  background: none;
+  left: 0;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 1000%;
+}
+div.setOfStepsContainer .stepContainer {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-block;
+  height: 490px;
+  margin: 0.25rem;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+  width: 690px;
+}
+div.setOfStepsContainer .stepContainer.scrollable {
+  overflow-y: scroll;
+}
+div.setOfStepsContainer .stepContainer > h2 {
+  line-height: 1.5rem;
+  margin: 0 0.5%;
+  width: 99%;
+}
+div.setOfStepsContainer .stepContainer .openingsContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div.setOfStepsContainer .stepContainer .openingsContainer > .pretext,
+div.setOfStepsContainer .stepContainer .openingsContainer > .posttext {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 0 0.5rem;
+  margin: 0;
+}
+div.setOfStepsContainer .stepContainer .openingsControls {
+  margin: 0;
+}
+div.setOfStepsContainer .stepContainer .openingsControls .filterControlContainer {
+  margin-top: 0;
+}
+div.setOfStepsContainer .stepContainer .openingsControls .filterControls .filterFrame .filterButtonContainer {
+  margin-top: 0;
+}
+div.setOfStepsContainer .stepContainer .openingsControls .filterControls .filterFrame .filterButtonContainer .filterControlsParent {
+  padding-top: 0;
+}
+div.setOfStepsContainer .stepContainer .openingsControls .filterControls .filterFrame .filterButtonContainer .dateContainerParent .datePickerContainer {
+  display: inline-block;
+}
+div.setOfStepsContainer .stepContainer .openingsControls .filterControls .filterFrame .filterButtonContainer .dateContainerParent .datePickerContainer .dateRangeInput {
+  display: inline-block;
+  float: left;
+  width: 80%;
+}
+div.setOfStepsContainer .stepContainer .openingsControls .filterControls .filterFrame .filterButtonContainer .dateContainerParent .datePickerContainer a img {
+  width: 1.5rem;
+}
+div.setOfStepsContainer .stepContainer .scrollTableWrapper {
+  flex: 1;
+}
+div.setOfStepsContainer .stepContainer .openingsData {
+  height: 100%;
+  padding: 0 0.25rem;
+}
+div.setOfStepsContainer .slotDetailsContainer .apptDetailsControlsContainer {
+  text-align: center;
+  display: flex;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: -1px;
+  background: #ffffff;
+  z-index: 5;
+}
+div.setOfStepsContainer .slotDetailsContainer .apptDetailsControlsContainer .button {
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  width: 50%;
+  margin-top: 0;
+}
+div.setOfStepsContainer .slotDetailsContainer .apptDetailsControlsContainer .button:last-child {
+  margin: 0.5rem 0;
+  margin-top: 0;
+}
+div.setOfStepsContainer .slotDetailsContainer .apptDetailsControlsContainer .prevMainStep {
+  display: inline-block;
+  padding: 5px 20px;
+}
+div.setOfStepsContainer .slotDetailsContainer .standardBanner.informationalType {
+  margin-bottom: 0.75rem;
+}
+div.setOfStepsContainer .loginSignupContainer h1,
+div.setOfStepsContainer .loginSignupContainer .lb_close {
+  display: none;
+}
+div.setOfStepsContainer .loginSignupContainer > .pretext,
+div.setOfStepsContainer .loginSignupContainer > .posttext {
+  margin: 0.5rem 0.5rem 0;
+  text-align: center;
+  width: calc(100% - 1rem);
+}
+div.setOfStepsContainer .signupContainer {
+  width: 690px;
+  z-index: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer {
+  margin: 0;
+  width: 690px;
+  overflow: visible;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer .slider {
+  padding: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep {
+  margin: 0.25rem 0.2%;
+  overflow: visible;
+  width: 640px;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .prevMainStep {
+  visibility: visible;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer .navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  background: #ffffff;
+  height: auto;
+  bottom: 0;
+  padding-bottom: 0.5rem;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer .navigation .button {
+  z-index: 2;
+  width: calc(50% - 0.25rem);
+  position: relative;
+}
+div.setOfStepsContainer .signupContainer .signupStepsContainer .navigation .button:first-child {
+  margin-right: 0.5rem;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing::after {
+  background: #ffffff none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0.5rem;
+  position: absolute;
+  width: calc(100% - 1rem);
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing h2 {
+  display: inline-block;
+  margin: 5px 0 10px;
+  text-align: center;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content {
+  padding-bottom: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content::before {
+  border-right: 1px solid #cccccc;
+  content: "";
+  display: block;
+  height: 100rem;
+  left: 50%;
+  margin-bottom: -100rem;
+  position: relative;
+  top: 0;
+  width: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content.noDivider::before {
+  display: none;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  padding: 0 0.5rem;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content .pretext {
+  margin: 0 0 1rem;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > .pretext {
+  background: #ffffff none repeat scroll 0 0;
+  margin: 0;
+  padding: 0 0 1rem;
+  position: relative;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content .posttext {
+  text-align: center;
+  margin: 1rem 0 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > .posttext {
+  background: #ffffff none repeat scroll 0 0;
+  margin: 0;
+  padding: 1rem 0 0;
+  position: relative;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > .posttext::after {
+  background: #ffffff none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 100rem;
+  margin-bottom: -100rem;
+  width: calc(100% - 1rem);
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer {
+  background: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .login {
+  display: block;
+  text-align: center;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .button {
+  margin: 0.5rem 0;
+  width: 87.5%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .loginHeader {
+  padding-right: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput {
+  margin: 0 0 0.25rem;
+  text-align: left;
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput.compact {
+  margin: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput input {
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput + .ghostInput {
+  margin: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput + .ghostInput input {
+  border-style: none solid solid;
+  border-width: 0 1px 1px;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .recovery {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+  text-align: center;
+  width: 50%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > div.proxylistcontainer {
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .proxysection {
+  color: #246fb5;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 5px 0 10px;
+  padding: 0.75rem 0 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards {
+  padding: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.25rem;
+  margin: 0 0.5% 0.5rem;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  width: 49.5%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard:nth-of-type(odd) {
+  margin-left: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard:nth-of-type(even) {
+  margin-right: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard.selected:before {
+  background-color: #246fb5;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0.33rem;
+  z-index: 1;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard {
+  box-shadow: none;
+  opacity: 0.75;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard:hover, div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard:focus, div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard.selected {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a {
+  height: 100%;
+  padding: 0.5rem;
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a:focus, div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a:hover {
+  background-color: #edf3f9;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a > .proxyPhoto {
+  display: inline-block;
+  height: 3.75rem;
+  width: 3.75rem;
+  vertical-align: top;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a > .proxyName {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  vertical-align: top;
+  width: calc(100% - 4.75rem);
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .formbuttons {
+  text-align: center;
+}
+div.setOfStepsContainer .signupContainer .orHolder {
+  display: none;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .signupheader {
+  margin: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .signupheader .header {
+  padding-right: 0;
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .navigation {
+  margin: 1.5rem 0 0.5rem;
+  position: static;
+  width: 100%;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .button {
+  margin: 0 0.5rem 0 0;
+  position: static;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .button:last-child {
+  margin-right: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .button.prevMainStep {
+  display: inline-block;
+}
+div.setOfStepsContainer .ghostInput:not(.ghosted) > label[for=NationalIdLast4] {
+  font-size: 0.85rem;
+}
+div.setOfStepsContainer .signupContainer .signupStep.insurance .sampleimage {
+  margin-left: 0;
+}
+div.setOfStepsContainer .signupContainer .signupStep.insurance .previmage,
+div.setOfStepsContainer .signupContainer .signupStep.insurance .nextimage {
+  margin: 5px 5px 0 0;
+}
+
+.force_redraw {
+  border-color: transparent;
+}
+
+.content > fieldset {
+  padding-bottom: 2rem;
+}
+
+.signupContainer .content .validation-summary-errors,
+.signupContainer .content .errorcontainer {
+  max-width: 100%;
+  order: 1;
+  margin-top: 0;
+}
+
+iframe[src="about:blank"] {
+  display: none;
+}
+
+.setOfStepsContainer .signupContainer .slider,
+.setOfStepsContainer .signupsection {
+  white-space: nowrap;
+}
+.setOfStepsContainer .signupStep {
+  white-space: normal;
+}
+.setOfStepsContainer .signupStep,
+.setOfStepsContainer .signupsection,
+.setOfStepsContainer .signupStep .column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+body.embedded #embeddedScheduleNoCookies .noCookies {
+  height: calc(100vh - 1rem);
+  max-height: 550px;
+  min-height: 10rem;
+  position: relative;
+}
+body.embedded #embeddedScheduleNoCookies .noCookies .verticalCenter {
+  margin: 0 1rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 2rem);
+}
+body.embedded #embeddedScheduleNoCookies .noCookies .icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 64px;
+  margin: auto;
+  width: 64px;
+}
+body.embedded #embeddedScheduleNoCookies #noCookies .icon {
+  display: none;
+}
+body.embedded #embeddedScheduleNoCookies #noCookiesError .icon {
+  background-image: url("../en-US/images/warning.png");
+}
+
+.reservationFailPopup .titlebar {
+  background-image: url("../en-US/images/icon_stop.png");
+  background-repeat: no-repeat;
+  background-size: 1.5rem 1.5rem;
+  background-position: left 0.7rem top 0.4rem;
+}
+.reservationFailPopup .titlebar h2 {
+  margin-left: 2rem;
+}
+
+.webOnly {
+  display: block !important;
+}
+
+.mobileOnly {
+  display: none !important;
+}
+
+@media only screen and (max-width: 699px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .webOnly {
+    display: none !important;
+  }
+
+  .mobileOnly {
+    display: block !important;
+  }
+
+  body.embedded,
+body.embedded .progressbar,
+body.embedded .lb_content,
+body.embedded .errorpopup {
+    width: 50px;
+    min-width: 100%;
+  }
+  body.embedded .lb_content {
+    left: 0;
+    margin: 0;
+  }
+
+  html.embedded,
+html.embedded > body.embedded,
+html.embedded #main {
+    height: auto;
+  }
+  html.embedded.poppedOut,
+html.embedded.poppedOut > body.embedded,
+html.embedded.poppedOut #wrap,
+html.embedded.poppedOut #content,
+html.embedded.poppedOut #main,
+html.embedded.poppedOut .setOfStepsContainer,
+html.embedded.poppedOut body.embedded div.setOfStepsContainer > div.slider {
+    height: 100%;
+  }
+  html.embedded.poppedOut.scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+  }
+
+  #content {
+    overflow: visible;
+  }
+
+  body.embedded #wrap {
+    min-height: 100vh;
+  }
+  body.embedded #content,
+body.embedded #main {
+    min-height: 0 !important;
+  }
+
+  html.embedded.poppedOut body.embedded div.setOfStepsContainer > div.slider:not(.nointernalscroll) {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+  }
+
+  div.setOfStepsContainer, div.setOfStepsContainer > div.slider, div.setOfStepsContainer > div.slider div.stepContainer {
+    width: 50px;
+    min-width: 100%;
+  }
+  div.setOfStepsContainer > div.slider div.stepContainer {
+    margin: 0;
+    display: block;
+  }
+  div.setOfStepsContainer .stepContainer.slotDetailsContainer .comments {
+    width: 100%;
+  }
+  div.setOfStepsContainer, div.setOfStepsContainer > div.slider, div.setOfStepsContainer > div.slider div.stepContainer, div.setOfStepsContainer div.openingsData {
+    height: auto;
+    overflow: visible;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep {
+    min-height: 0 !important;
+  }
+  div.setOfStepsContainer .stepContainer.scrollable {
+    overflow-y: inherit;
+  }
+  div.setOfStepsContainer .stepContainer .openingsContainer {
+    display: block;
+    height: auto;
+  }
+  div.setOfStepsContainer .stepContainer .openingsContainer > .pretext,
+div.setOfStepsContainer .stepContainer .openingsContainer > .posttext {
+    max-height: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep .content {
+    padding-bottom: 0;
+  }
+  div.setOfStepsContainer div.openingsNoData {
+    min-height: 400px;
+    height: 100vh;
+  }
+  div.setOfStepsContainer div.openingsControls .filterControl:not(.personControl) {
+    display: none;
+  }
+  div.setOfStepsContainer .filterControlsParent .dateContainerParent {
+    max-width: 10rem;
+  }
+  div.setOfStepsContainer .filterControlsParent .dateContainerParent .filterName {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  div.setOfStepsContainer #peopleGroup {
+    right: unset !important;
+    min-width: unset;
+    left: -0.25rem;
+  }
+  div.setOfStepsContainer .progressbar {
+    display: none;
+  }
+  div.setOfStepsContainer .stepContainer .scrollTableWrapper {
+    border: none;
+  }
+  div.setOfStepsContainer > div.slider {
+    left: 0 !important;
+  }
+  div.setOfStepsContainer > div.slider div.stepContainer.offscreen {
+    display: none;
+  }
+  div.setOfStepsContainer .slotDetailsContainer .apptDetailsControlsContainer,
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer {
+    flex-direction: column-reverse;
+  }
+  div.setOfStepsContainer .button,
+div.setOfStepsContainer .stepContainer.slotDetailsContainer.scrollable .apptDetailsControlsContainer .button,
+div.setOfStepsContainer .signupContainer .signupStep.landing .continueAsGuestContainer .button,
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > div .button {
+    margin: 0 0 0.5rem 0;
+    width: 100%;
+    padding: 0.522em 0.26em;
+    line-height: 1.5rem;
+    display: inline-block;
+    -webkit-appearance: none;
+    background-image: none;
+    border-radius: 0.125em;
+    border: none;
+    text-shadow: none;
+  }
+
+  .ajaxspinner {
+    -webkit-perspective: 1000;
+  }
+
+  div.setOfStepsContainer div.openingsData .slotslist {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0.1rem;
+  }
+  div.setOfStepsContainer div.openingsData .slotslist.ontouchdevice {
+    overflow-x: auto;
+  }
+  div.setOfStepsContainer div.openingsData .slotslist.onslowtouchdevice {
+    white-space: normal;
+  }
+  div.setOfStepsContainer div.openingsData .slotslist::-webkit-scrollbar {
+    display: none;
+  }
+  div.setOfStepsContainer div.openingsData .slotslist > *,
+div.setOfStepsContainer div.openingsData .slotslist .hiddenslots > * {
+    display: inline;
+  }
+  div.setOfStepsContainer div.openingsData .plain .slotslist, div.setOfStepsContainer div.openingsData .plain .slotslist.wide {
+    width: 100%;
+  }
+  div.setOfStepsContainer div.openingsData .plain .slotslist {
+    margin-bottom: 0.22em;
+  }
+  div.setOfStepsContainer .departmentSlots {
+    padding-bottom: 0.25rem;
+  }
+  div.setOfStepsContainer .departmentSlots {
+    position: relative;
+  }
+  div.setOfStepsContainer .departmentSlots .scrollIndicator {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    cursor: pointer;
+    background: #ffffff;
+    width: 1.75em;
+  }
+  div.setOfStepsContainer .departmentSlots .scrollIndicator.left {
+    left: 0;
+    opacity: 0;
+    box-shadow: 3px 0 2px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ffffff 20%, rgba(255, 255, 255, 0.5) 100%);
+  }
+  div.setOfStepsContainer .departmentSlots .scrollIndicator.right {
+    right: 0;
+    opacity: 1;
+    box-shadow: -3px 0 2px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to left, #ffffff 20%, rgba(255, 255, 255, 0.5) 100%);
+  }
+  div.setOfStepsContainer .departmentSlots .scrollIndicator.left:before, div.setOfStepsContainer .departmentSlots .scrollIndicator.right:before {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.35em;
+    left: 50%;
+    margin-left: -0.175em;
+  }
+  div.setOfStepsContainer .departmentSlots .scrollIndicator.left:before {
+    border-width: 0.35em 0.35em 0.35em 0;
+    border-color: transparent #767676 transparent transparent;
+  }
+  div.setOfStepsContainer .departmentSlots .scrollIndicator.right:before {
+    border-width: 0.35em 0 0.35em 0.35em;
+    border-color: transparent transparent transparent #767676;
+  }
+  div.setOfStepsContainer div.openingsData .departmentSlots > div {
+    -webkit-tap-highlight-color: transparent;
+  }
+  div.setOfStepsContainer .stepContainer div.openingsData .plain .expandSlots,
+div.setOfStepsContainer .stepContainer div.openingsData .moreslotslabel {
+    display: none !important;
+  }
+  div.setOfStepsContainer .stepContainer div.openingsData .plain .hiddenslots,
+div.setOfStepsContainer .stepContainer div.openingsData .subslotslist,
+div.setOfStepsContainer .stepContainer div.openingsData div.moreslots,
+div.setOfStepsContainer .stepContainer div.openingsData div.moreslots .slotdetailaction,
+div.setOfStepsContainer .stepContainer div.openingsData div.moreslots .slotdetailaction.dismissed {
+    display: inline-block !important;
+  }
+  div.setOfStepsContainer .stepContainer div.openingsData .plain .onslowtouchdevice .hiddenslots,
+div.setOfStepsContainer .stepContainer div.openingsData .onslowtouchdevice .subslotslist,
+div.setOfStepsContainer .stepContainer div.openingsData .onslowtouchdevice div.moreslots {
+    display: inline !important;
+  }
+  div.setOfStepsContainer .stepContainer div.openingsData .subslotslist {
+    width: auto;
+    height: auto;
+    max-width: none;
+    margin: 0;
+  }
+  div.setOfStepsContainer .stepContainer div.openingsData div.moreslots.hover {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    position: static;
+    width: auto;
+  }
+  div.setOfStepsContainer div.openingsData .slotslist a.slotdetailaction {
+    width: auto;
+    min-width: 5.9em;
+    margin: 0 4px 4px 0;
+    position: static;
+  }
+
+  body.isInside div.setOfStepsContainer .slotDetailsContainer .card,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .slotDetailsContainer .card {
+    background: none;
+  }
+
+  .setOfStepsContainer .signupStep,
+.setOfStepsContainer .signupsection,
+.setOfStepsContainer .signupStep .column {
+    display: block;
+  }
+
+  div.setOfStepsContainer .stepContainer.slotDetailsContainer {
+    padding: 0.625em 0.625em 1.25em;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .hasDepartmentPhoto, div.setOfStepsContainer .slotDetailsContainer[class] .departmentPhoto, div.setOfStepsContainer .slotDetailsContainer[class] .dateTime, div.setOfStepsContainer .slotDetailsContainer[class] .address, div.setOfStepsContainer .slotDetailsContainer[class] .instructions {
+    display: block;
+    margin: 0 0 0.75rem;
+    padding-left: 0;
+    height: auto;
+    width: 100%;
+  }
+  div.setOfStepsContainer .slotDetailsContainer > .card, div.setOfStepsContainer .slotDetailsContainer.card {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    box-shadow: none;
+    width: 100%;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .card {
+    margin-top: 0.5rem;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .card .header {
+    min-height: 3rem;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .card > div:first-child > div:first-child:not(.hasProviderPhoto) .header {
+    margin-left: -2.5rem;
+    min-height: 0;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .card > div:first-child > div {
+    padding-left: 2.5rem;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .providerPhoto {
+    margin-left: -2.6rem;
+  }
+  div.setOfStepsContainer .slotDetailsContainer[class] .roundedimage {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  body.isInside div.setOfStepsContainer .signupContainer .signupStepsContainer .card,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .signupContainer .signupStepsContainer .card {
+    background: none;
+  }
+  body.isInside div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep {
+    width: 100%;
+    overflow: visible;
+  }
+  body.isInside div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .content,
+body.isPrelogin:not(.embedded) div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .content {
+    padding-bottom: 3rem;
+  }
+
+  div.setOfStepsContainer .signupStep .spacer,
+div.setOfStepsContainer .signupContainer > .navigation {
+    display: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStepsContainer,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .slider,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .column,
+div.setOfStepsContainer .signupContainer .signupStep.landing .content > div {
+    width: 100%;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .content > div {
+    padding: 0;
+  }
+  div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep {
+    margin: 0.25rem 0;
+  }
+  div.setOfStepsContainer .signupsection .field-validation-error {
+    float: none;
+    display: inline-block;
+    width: 100%;
+  }
+  div.setOfStepsContainer .signupStep .cardline.required {
+    display: block;
+    position: static;
+    text-align: inherit;
+  }
+  div.setOfStepsContainer .signupContainer .slider {
+    left: 0 !important;
+  }
+  div.setOfStepsContainer .signupStep.offscreen {
+    display: none;
+  }
+  div.setOfStepsContainer .signupContainer input[type=text],
+div.setOfStepsContainer .signupContainer input[type=password],
+div.setOfStepsContainer .signupContainer input[type=tel],
+div.setOfStepsContainer .signupContainer input[type=email],
+div.setOfStepsContainer .signupContainer select,
+div.setOfStepsContainer .signupContainer textarea,
+div.setOfStepsContainer .signupContainer .radiocontainer label,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .ghostInput input,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .ghostInput select {
+    font-size: 1.3em;
+  }
+  div.setOfStepsContainer .signupContainer input[type=text],
+div.setOfStepsContainer .signupContainer input[type=password],
+div.setOfStepsContainer .signupContainer input[type=tel],
+div.setOfStepsContainer .signupContainer input[type=email],
+div.setOfStepsContainer .signupContainer select,
+div.setOfStepsContainer .signupContainer textarea,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .ghostInput input,
+div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .ghostInput select {
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+  div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .column fieldset {
+    width: 100%;
+  }
+  div.setOfStepsContainer .signupContainer div > label,
+div.setOfStepsContainer .signupContainer .column fieldset legend {
+    position: relative;
+    z-index: 1;
+  }
+  div.setOfStepsContainer .signupContainer select {
+    height: auto;
+  }
+  div.setOfStepsContainer .signupContainer .radiocontainer {
+    display: inline-block;
+    width: 100%;
+  }
+  div.setOfStepsContainer .signupContainer .radiocontainer input {
+    left: 0;
+  }
+  div.setOfStepsContainer .signupStep,
+div.setOfStepsContainer .signupStep.landing {
+    background-image: none;
+    box-shadow: none;
+    margin: 0;
+  }
+  div.setOfStepsContainer .signupStep:focus {
+    outline: none;
+  }
+  div.setOfStepsContainer .loginSignupContainer > .pretext {
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  div.setOfStepsContainer .signupContainer .signupStepsContainer .signupStep .navigation {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  div.setOfStepsContainer .signupContainer .signupStepsContainer .content > .navigation {
+    margin-top: 2em;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: -1px;
+    width: 100%;
+    z-index: 5;
+    padding-bottom: 0;
+  }
+  div.setOfStepsContainer .signupsection .content > .navigation > .button {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 0 0.5rem 0;
+    padding: 0.522em 0.26em;
+    position: static;
+    width: 100%;
+  }
+  div.setOfStepsContainer .signupsection .content > .navigation .button:first-child {
+    margin-right: 0;
+  }
+  div.setOfStepsContainer .signupsection .prevMainStep {
+    visibility: inherit;
+  }
+  div.setOfStepsContainer .signupStep.landing .content .loginContainer,
+div.setOfStepsContainer .signupStep.landing .recovery,
+div.setOfStepsContainer .signupContainer .signupStep.landing .content,
+div.setOfStepsContainer .signupStep.landing .username,
+div.setOfStepsContainer .signupStep.landing .password,
+div.setOfStepsContainer .signupStep.landing .orHolder,
+div.setOfStepsContainer .signupStep.landing .signupheader,
+div.setOfStepsContainer .signupStep.landing .proxylistcontainer,
+div.setOfStepsContainer .signupStep.landing .proxylistcontainer .scheduleorcancel,
+div.setOfStepsContainer .signupStep.landing .content > .navigation {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .content::before {
+    border-right: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput {
+    width: 100%;
+  }
+  div.setOfStepsContainer [id*=loginIntro] {
+    display: block;
+    width: 100%;
+  }
+  div.setOfStepsContainer [id*=loginIntro].hidden + [id*=loginfieldscontainer],
+div.setOfStepsContainer [id*=loginIntro].hidden ~ .button.completeworkflow {
+    display: inline-block;
+  }
+  div.setOfStepsContainer [id*=loginIntro]:not(.hidden) + [id*=loginfieldscontainer],
+div.setOfStepsContainer [id*=loginIntro]:not(.hidden) ~ .button.completeworkflow {
+    display: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .loginContainer .ghostInput.compact {
+    margin-bottom: 1px;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .proxylistcontainer {
+    border: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .proxylistcontainer .button {
+    height: auto;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .proxysection {
+    margin: 0;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard {
+    min-height: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard a .proxyPhoto {
+    vertical-align: middle;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard a .proxyName {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: calc(100% - 80px);
+  }
+  div.setOfStepsContainer .signupStep.landing .orHolder {
+    display: inline-block;
+    margin: 0.625em 0;
+    padding: 0.25rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff;
+    text-align: center;
+  }
+  div.setOfStepsContainer .signupStep.landing .orHolder:before {
+    content: "";
+    display: block;
+    margin: 0.75em 0 -0.75em;
+    border-top: 1px solid #cccccc;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.landing .proxylistcontainer:not(.hidden) ~ .orHolder,
+div.setOfStepsContainer .signupContainer .signupStep.landing .proxylistcontainer:not(.hidden) ~ .continueAsGuestContainer {
+    display: none;
+  }
+  div.setOfStepsContainer .signupContainer .signupStep.insurance .sampleimage {
+    display: block;
+    margin: 2em auto 0;
+    width: 100%;
+    max-width: 315px;
+    height: calc(60vw);
+    max-height: 200px;
+    background-size: 100% auto;
+    background-position: left top;
+  }
+
+  #lightbox .loading h1 {
+    line-height: 2rem;
+  }
+
+  #lightbox .closeLightbox {
+    background-image: url("../en-US/images/close_popup.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    top: -8px;
+    right: -14px;
+  }
+}
+@media only screen and (max-width: 699px) and (max-width: 768px) {
+  #lightbox .closeLightbox {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 699px) {
+  #lightbox .dummyVoiceOveriOSButton {
+    opacity: 0;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .component.Popup.small {
+    min-width: 290px;
+    max-width: 96vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  div.setOfStepsContainer [id*=confirmContainer] {
+    padding: 0.5rem;
+  }
+  div.setOfStepsContainer .slotDetailsContainer .signup {
+    display: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .filterButtonContainer .filterControlsParent .dateContainerParent {
+    width: 8rem;
+  }
+  .filterButtonContainer .filterControlsParent .dateContainerParent .calendar.datechooserAnchor {
+    display: none;
+  }
+}

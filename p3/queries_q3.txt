@@ -1,0 +1,59 @@
+SET SEARCH_PATH TO projectschema;
+
+--queries for q3: 
+--Among unemployment rate, interest rate, and household debt-to-income, 
+--which factor significantly impacts the housing market?
+
+--As we already get data of unemployment, household debt-to-income,
+--we will input the value from q1, q2;
+\i queries_q1.txt
+\i queries_q2.txt
+
+--Get dataview of interest rate and housing prince index
+drop view if exists dataview3 cascade;
+
+create view dataview3
+as 
+select index, rate from
+interestrt natural left join housingpi;
+
+--Get the their correlation:
+drop view if exists corr3 cascade;
+create view corr3
+as
+select corr(index, rate) from
+dataview3;
+
+--Compare their correlation
+drop view if exists compare cascade;
+
+create view compare
+as 
+select corr.corr as householddti_corr,
+corr2.corr as unemploymentrt_corr,
+corr3.corr as interestrt_corr
+from corr, corr2, corr3;
+
+--The linear regression model of interest rate and household:
+drop view if exists regression3 cascade;
+create view regression3
+as
+select
+((Sy * Sxx) - (Sx * Sxy))
+    / ((N * (Sxx)) - (Sx * Sx)) AS intercept,
+    ((N * Sxy) - (Sx * Sy))
+    / ((N * Sxx) - (Sx * Sx)) AS slope,
+    ((N * Sxy) - (Sx * Sy))
+    / SQRT(
+        (((N * Sxx) - (Sx * Sx))
+         * ((N * Syy - (Sy * Sy))))) AS r
+from
+(select sum(rate) as Sx, Sum(index) as Sy,
+sum(rate*rate) as Sxx,
+sum(rate*index) as Sxy,
+sum(index*index) as Syy,
+count(*) as N
+from dataview3) as sumdata;
+
+
+

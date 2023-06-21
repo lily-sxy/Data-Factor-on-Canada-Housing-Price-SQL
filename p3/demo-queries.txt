@@ -1,0 +1,156 @@
+-------------------- Loading schema and data: --------------------
+
+csc343h-songxi24=> \i schema.ddl
+psql:schema.ddl:1: NOTICE:  drop cascades to 18 other objects
+DETAIL:  drop cascades to table projectschema.housingpi
+drop cascades to table projectschema.unemploymentrt
+drop cascades to table projectschema.interestrt
+drop cascades to table projectschema.householddti
+drop cascades to table projectschema.housingpistaging
+drop cascades to table projectschema.unemploymentrtstaging
+drop cascades to table projectschema.interestrtstaging
+drop cascades to table projectschema.householddtistaging
+drop cascades to view projectschema.dataview
+drop cascades to view projectschema.corr
+drop cascades to view projectschema.regression
+drop cascades to view projectschema.dataview2
+drop cascades to view projectschema.corr2
+drop cascades to view projectschema.regression2
+drop cascades to view projectschema.dataview3
+drop cascades to view projectschema.corr3
+drop cascades to view projectschema.compare
+drop cascades to view projectschema.regression3
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+csc343h-songxi24=> \i intermediate.sql
+SET
+psql:intermediate.sql:7: NOTICE:  schema "housingpistaging" does not exist, skipping
+DROP SCHEMA
+CREATE TABLE
+psql:intermediate.sql:17: NOTICE:  schema "unemploymentrtstaging" does not exist, skipping
+DROP SCHEMA
+CREATE TABLE
+psql:intermediate.sql:28: NOTICE:  schema "interestrtstaging" does not exist, skipping
+DROP SCHEMA
+CREATE TABLE
+psql:intermediate.sql:38: NOTICE:  schema "householddtistaging" does not exist, skipping
+DROP SCHEMA
+CREATE TABLE
+COPY 248
+COPY 248
+COPY 248
+COPY 82
+INSERT 0 248
+INSERT 0 82
+INSERT 0 248
+INSERT 0 248
+
+-------------------- Investigative Question 1: ------------------
+
+csc343h-songxi24=> \i queries_q1.txt
+SET
+psql:queries_q1.txt:9: NOTICE:  view "dataview" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q1.txt:16: NOTICE:  view "corr" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q1.txt:24: NOTICE:  view "regression" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+csc343h-songxi24=> select * from corr;
+       corr        
+-------------------
+ 0.975773580353722
+(1 row)
+
+csc343h-songxi24=> select * from regression;
+     intercept     |       slope       |         r         
+-------------------+-------------------+-------------------
+ -6.33979882938523 | 0.631401112673697 | 0.975773580353722
+(1 row)
+
+-------------------- Investigative Question 2: ------------------
+
+csc343h-songxi24=> \i queries_q2.txt
+SET
+psql:queries_q2.txt:7: NOTICE:  view "dataview2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q2.txt:16: NOTICE:  view "corr2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q2.txt:23: NOTICE:  view "regression2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+csc343h-songxi24=> select * from corr2;
+        corr         
+---------------------
+ -0.0538477904750261
+(1 row)
+
+csc343h-songxi24=> select * from regression2;
+    intercept    |       slope        |          r          
+-----------------+--------------------+---------------------
+ 92.667505904528 | -0.734603754376189 | -0.0538477904750261
+(1 row)
+
+-------------------- Investigative Question 3: ------------------
+
+
+csc343h-songxi24=> \i queries_q3.txt
+SET
+SET
+psql:queries_q1.txt:9: NOTICE:  drop cascades to 2 other objects
+DETAIL:  drop cascades to view corr
+drop cascades to view regression
+DROP VIEW
+CREATE VIEW
+psql:queries_q1.txt:16: NOTICE:  view "corr" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q1.txt:24: NOTICE:  view "regression" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+SET
+psql:queries_q2.txt:7: NOTICE:  drop cascades to 2 other objects
+DETAIL:  drop cascades to view corr2
+drop cascades to view regression2
+DROP VIEW
+CREATE VIEW
+psql:queries_q2.txt:16: NOTICE:  view "corr2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q2.txt:23: NOTICE:  view "regression2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q3.txt:13: NOTICE:  view "dataview3" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q3.txt:21: NOTICE:  view "corr3" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q3.txt:28: NOTICE:  view "compare" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:queries_q3.txt:38: NOTICE:  view "regression3" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+csc343h-songxi24=> select * from compare;
+ householddti_corr | unemploymentrt_corr |  interestrt_corr   
+-------------------+---------------------+--------------------
+ 0.975773580353722 | -0.0538477904750261 | -0.651201792829509
+(1 row)
+
+csc343h-songxi24=> select * from regression3;
+    intercept    |       slope       |         r          
+-----------------+-------------------+--------------------
+ 100.09468605644 | -7.06644903839009 | -0.651201792829509
+(1 row)
+
+

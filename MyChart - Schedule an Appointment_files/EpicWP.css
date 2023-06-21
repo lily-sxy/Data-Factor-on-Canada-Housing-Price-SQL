@@ -1,0 +1,1272 @@
+/* Copyright 2018-2021 Epic Systems Corporation */
+.roundedimage {
+  background: transparent none no-repeat scroll center center;
+  background-size: cover;
+  border: 1px solid #cccccc;
+  border-radius: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.header {
+  text-align: left;
+}
+.header.disabled {
+  opacity: 0.5;
+}
+.header .step,
+.header .stepNumber {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .stepNumber {
+  background-color: #246fb5;
+  border: 2px solid #246fb5;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  height: 1.5rem;
+  line-height: 1.25rem;
+  text-align: center;
+  width: 1.5rem;
+}
+.header .step {
+  margin: 0 0 0 0.25rem;
+}
+
+.stepContainer > .header:focus {
+  outline: none;
+}
+
+.stepContainer .cardlist.buttonCards {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 calc(1.5rem + 4px);
+  text-align: left;
+}
+.stepContainer .cardlist.buttonCards .card {
+  padding: 0;
+}
+.stepContainer .cardlist.buttonCards.withIcon .card, .stepContainer .cardlist.buttonCards.withIcon .card a, .stepContainer .cardlist.buttonCards.withIcon .card label {
+  min-height: 6.5rem;
+}
+.stepContainer .cardlist.buttonCards .card a,
+.stepContainer .cardlist.buttonCards .card label {
+  display: block;
+  height: 100%;
+  padding: 0.5rem;
+  width: 100%;
+}
+.stepContainer .cardlist.buttonCards .card .zipSearch label,
+.stepContainer .cardlist.buttonCards .card .zipSearch input {
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: middle;
+}
+.stepContainer .cardlist.buttonCards .card .zipSearch label {
+  color: inherit;
+  width: auto;
+}
+.stepContainer .cardlist.buttonCards .card .zipSearch input.zip {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  width: 5rem;
+}
+.stepContainer .cardlist.buttonCards .card .stepIcon,
+.stepContainer .cardlist.buttonCards .card .iconLabel,
+.stepContainer .cardlist.buttonCards .card .iconSubtext {
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+.stepContainer .cardlist.buttonCards .card .stepIcon {
+  max-height: 5rem;
+}
+
+.stepContainer .openingsData .card > .header {
+  color: #363636;
+  margin: -0.5rem 0 0.25rem -0.5rem;
+  padding: 0.5rem;
+  width: calc(100% + 1rem);
+}
+.stepContainer .openingsData .card .cardline.name {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.stepContainer .openingsData .card .header + .cardline.name {
+  border-top: none;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+}
+.stepContainer .openingsData .card .cardline.photo {
+  padding: 0.25rem 0.5rem 0 0;
+  width: 4rem;
+}
+.stepContainer .openingsData .card .cardline.photo + .cardline.partial {
+  max-width: calc(100% - 4rem);
+}
+.stepContainer .openingsData .card .jumpArrow {
+  width: 1rem;
+  height: 1rem;
+  fill: #00a1db;
+}
+.stepContainer .openingsData .departmentSlots {
+  margin: 0.5rem 0 0;
+}
+.stepContainer .openingsData .departmentSlots:first-child {
+  margin: 0;
+}
+
+.departmentInfo {
+  margin: 0 0 0.25rem;
+}
+.departmentInfo .departmentSeparator {
+  padding: 0 0.75rem 0 0.75rem;
+}
+
+.stepContainer .scrollTableWrapper {
+  border-color: #dbdbdb transparent;
+  border-style: solid none;
+  border-width: 1px 0;
+  overflow: hidden;
+}
+
+.stepContainer .openingsData .slotslist {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.25rem 0 1rem;
+}
+.stepContainer .openingsData .slotslist:last-child {
+  margin-bottom: 0;
+}
+.stepContainer .openingsData .slotslist .subslotslist {
+  display: inline-block;
+  margin: 0 0.53rem 0.4rem 0;
+  min-height: 2.5rem;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: 6rem;
+}
+.stepContainer .openingsData .slotslist .subslotslist:last-child {
+  margin-right: 0;
+}
+.stepContainer .openingsData .slotslist .slotdetailaction {
+  display: block;
+  margin: 0 0 0.25rem;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1em;
+}
+.stepContainer .openingsData .slotslist .slotdetailaction:focus, .stepContainer .openingsData .slotslist .slotdetailaction:hover, .stepContainer .openingsData .slotslist .slotdetailaction.selected {
+  transform: scale(1.1);
+  background-color: #46ad5e;
+}
+.stepContainer .openingsData .slotslist .dismissed {
+  display: none;
+}
+.stepContainer .openingsData .slotslist .moreslotslabel {
+  display: block;
+  margin: -0.25rem 0 0;
+}
+.stepContainer .openingsData .slotslist .moreslots.hover {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  margin: -0.25rem 0 0 -0.5rem;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  width: calc(100% + 1rem);
+  z-index: 2;
+}
+.stepContainer .openingsData .slotslist .moreslots.hover .dismissed {
+  display: block;
+}
+.stepContainer .openingsData .slotslist .moreslots.hover .moreslotslabel {
+  display: none;
+}
+.stepContainer .openingsData .plain .card .cardline.name {
+  margin-top: 0.5rem;
+}
+.stepContainer .openingsData .plain .card .header + .cardline.name {
+  margin-top: 0;
+}
+.stepContainer .openingsData .plain .slotslist {
+  min-height: 0;
+}
+.stepContainer .openingsData .plain .slotslist .slotdetailaction {
+  display: inline-block;
+  margin: 0 0.53rem 0.4rem 0;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: 6rem;
+}
+.stepContainer .openingsData .plain .expandSlots {
+  font-size: 0.9rem;
+  margin: -1.25rem 0 0;
+  padding: 0 1.25rem 0 1rem;
+}
+
+.openingsContainer .pretext {
+  padding-bottom: 1rem;
+}
+
+.filterButtonContainer {
+  margin-top: 0.75rem;
+  padding-bottom: 0rem;
+}
+.filterButtonContainer .filterControlsParent {
+  width: 100%;
+  display: inline-block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.filterButtonContainer .filterControlsParent .dateContainerParent {
+  width: 16rem;
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+.filterButtonContainer .filterControlsParent .dateContainerParent .dateRangeForm {
+  width: 85%;
+  max-width: 14rem;
+}
+.filterButtonContainer .filterControlsParent .dateContainerParent .filterName {
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1.9rem;
+  max-height: 1.9rem;
+  max-width: 12rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+.filterButtonContainer .filterControlsParent .dateContainerParent #fromDate_message {
+  text-align: left;
+  min-height: 0;
+  height: auto;
+  width: 90%;
+}
+.filterButtonContainer .filterControlsParent .filterControl {
+  margin: 0 0.5rem 0 0;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+.filterButtonContainer .filterControlsParent .filterControl .filterName {
+  display: block;
+  font-size: 0.9rem;
+  overflow: hidden;
+  line-height: 1.9rem;
+  max-height: 1.9rem;
+  padding: 0.25rem 0.5rem;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+.filterButtonContainer .filterControlsParent .filterControl .filterValue {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: block;
+  float: left;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 2.125rem;
+  max-height: 2.125rem;
+  overflow: hidden;
+  padding: 0rem 0.5rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+.filterButtonContainer .filterControlsParent .dayTimeControl {
+  width: 6.5rem;
+}
+.filterButtonContainer .filterControlsParent .personControl {
+  width: 6rem;
+}
+.filterButtonContainer .filterControlsParent .locationControl {
+  width: 8.5rem;
+}
+
+.stepContainer .openingsControls {
+  margin: -2rem 0 0;
+}
+.stepContainer .filterControls {
+  padding: 0 0 0 0.25rem;
+  text-align: right;
+}
+.stepContainer .filterControls p {
+  display: inline-block;
+  padding: 0 0.25rem 0 0;
+  vertical-align: bottom;
+}
+.stepContainer .filterControl {
+  display: inline-block;
+  height: 3.25rem;
+  line-height: 1.25rem;
+  margin: 0 0.5rem 0 0;
+  min-height: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+  width: auto;
+}
+.stepContainer .filterControl .filterName {
+  display: block;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+.stepContainer .filterControl .filterValue {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: block;
+  font-weight: bold;
+  padding: 0.125rem 0.5rem;
+  width: 100%;
+}
+.stepContainer .filterControl .optionsgroup {
+  min-height: inherit;
+  min-width: 20rem;
+  position: absolute;
+  right: 0.5rem;
+  text-align: left;
+  width: auto;
+  z-index: 1001;
+}
+.stepContainer .filterControl .optionsgroup .dayOfWeek {
+  padding: 0 0 0.5rem;
+}
+.stepContainer .filterControl .optionsgroup li {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+.stepContainer .filterControl .optionsgroup .dayOfWeek li {
+  width: 33.33%;
+}
+.stepContainer .filterControl .optionsgroup .timeOfDay li {
+  width: auto;
+}
+.stepContainer .filterControl .actionContainer {
+  text-align: right;
+}
+.stepContainer .filterControl .actionContainer .button {
+  margin: 0 0.5rem 0 0;
+}
+
+.slotDetailsContainer .header {
+  padding: 0 0 0.75rem;
+}
+.slotDetailsContainer .providerPhoto {
+  height: 0;
+  margin: 0 0 0 -4.5rem;
+  width: 4rem;
+}
+.slotDetailsContainer .roundedimage {
+  height: 4rem;
+  width: 4rem;
+}
+.slotDetailsContainer .providerName {
+  line-height: 1.5rem;
+}
+.slotDetailsContainer .dateTime,
+.slotDetailsContainer .address,
+.slotDetailsContainer .instructions {
+  min-height: 3rem;
+  padding: 0 0.5rem 0.5rem 2.5rem;
+  position: relative;
+  vertical-align: top;
+}
+.slotDetailsContainer .dateTime,
+.slotDetailsContainer .address {
+  display: inline-block;
+  width: 50%;
+}
+.slotDetailsContainer .instructions {
+  display: block;
+}
+.slotDetailsContainer .dateTime:before,
+.slotDetailsContainer .address:before,
+.slotDetailsContainer .instructions:before {
+  background: transparent none no-repeat scroll center center/2rem 2rem;
+  content: "";
+  height: 2rem;
+  margin: 0 0 0 -2.5rem;
+  position: absolute;
+  width: 2rem;
+}
+.slotDetailsContainer .dateTime:before {
+  background-image: url("../en-US/images/visits/clock.png");
+}
+.slotDetailsContainer .address:before {
+  background-image: url("../en-US/images/visits/directions.png");
+}
+.slotDetailsContainer .instructions:before {
+  background-image: url("../en-US/images/info.png");
+}
+.slotDetailsContainer .address p {
+  margin: 0;
+}
+.slotDetailsContainer .hasProviderPhoto {
+  padding-left: 4.5rem;
+}
+.slotDetailsContainer .hasDepartmentPhoto,
+.slotDetailsContainer .departmentPhoto {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+.slotDetailsContainer .hasDepartmentPhoto .dateTime,
+.slotDetailsContainer .hasDepartmentPhoto .address {
+  width: 100%;
+}
+.slotDetailsContainer .departmentPhoto {
+  padding: 0 0 0.5rem;
+}
+.slotDetailsContainer .popupearlyarrivalreason {
+  display: inline;
+}
+.slotDetailsContainer .comments {
+  margin: 0.5rem auto 0;
+  text-align: center;
+  width: 66%;
+}
+.slotDetailsContainer .comments label {
+  display: block;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+.slotDetailsContainer .standardBanner.informationalType {
+  margin-bottom: 0.75rem;
+}
+
+.signupContainer {
+  position: relative;
+  z-index: -1;
+}
+.signupContainer .card.loginContainer {
+  border-radius: 6px 6px 0 0;
+  background: #ffffff linear-gradient(to bottom, rgba(82, 204, 110, 0.05) 0%, rgba(82, 204, 110, 0.1) 100%) repeat scroll 0 0;
+  margin: -3.5rem 0 0 -1.25rem;
+  padding: 3.25rem 1.25rem 0.5rem;
+  width: calc(100% + 2.5rem);
+}
+.signupContainer .ghostInput.ghosted input:read-only {
+  border-width: 0px;
+  padding-left: 0rem;
+}
+.signupContainer select:disabled {
+  color: black;
+  background-color: white;
+  opacity: 1;
+  border-width: 0px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.signupContainer .login {
+  display: flex;
+  flex-flow: row wrap;
+}
+.signupContainer .login .loginHeader {
+  flex: 0 0 70%;
+  padding-right: 1rem;
+}
+.signupContainer .login .loginButton {
+  flex: 1;
+  padding: 0.75rem 0 0.5rem;
+}
+.signupContainer .login .button {
+  display: inline-block;
+  line-height: 2rem;
+  margin: 0;
+  vertical-align: top;
+}
+.signupContainer .login .loginFieldsContainer {
+  flex: 1 100%;
+}
+.signupContainer .login .loginFieldsContainer .button {
+  width: 30%;
+}
+.signupContainer .login .ghostInput {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}
+.signupContainer .login .ghostInput + .ghostInput {
+  margin: 0 5%;
+}
+.signupContainer .login .recovery {
+  margin: 0;
+}
+.signupContainer .login .recovery a {
+  width: auto;
+}
+.signupContainer .signupheader {
+  margin: 0.5rem 0 0;
+}
+.signupContainer .signupheader .header,
+.signupContainer .signupheader .pretext {
+  display: inline-block;
+  width: auto;
+}
+.signupContainer .signupheader .header {
+  padding-right: 0.5rem;
+}
+.signupContainer .signupStepsContainer {
+  max-width: none;
+  overflow: hidden;
+  width: calc(100% + 1.25rem);
+}
+.signupContainer .signupStepsContainer .slider {
+  max-width: none;
+  padding: 0 3rem;
+  position: relative;
+  width: 1000%;
+}
+.signupContainer .signupStepsContainer .signupStep {
+  margin: 0 1rem;
+  vertical-align: top;
+  width: 8%;
+}
+.signupContainer .signupStepsContainer .signupStep .content {
+  padding-bottom: 2rem;
+}
+.signupContainer .signupStepsContainer .signupStep .column {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+.signupContainer .signupStepsContainer .signupStep .column.fullwidth {
+  width: 100%;
+}
+.signupContainer .signupStepsContainer .signupStep .ghostInput input,
+.signupContainer .signupStepsContainer .signupStep .ghostInput select {
+  font-size: 1rem;
+  width: 80%;
+}
+.signupContainer .signupStepsContainer .signupStep .column fieldset {
+  width: 80%;
+}
+.signupContainer .signupStepsContainer .signupStep .column fieldset legend {
+  width: 100%;
+}
+.signupContainer .signupStepsContainer .signupStep legend.required::before {
+  margin-left: 0;
+}
+
+.verificationForm input {
+  margin-top: 1rem;
+}
+.verificationForm .messagedisplay {
+  display: inline;
+}
+.verificationForm .visibleCaptchaContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.verificationForm .__captchaCore > div {
+  margin: 0 0 0 0 !important;
+}
+
+.signupStep .navigation {
+  bottom: 0.5rem;
+  height: 2rem;
+  position: absolute;
+  text-align: center;
+  width: calc(100% - 1rem);
+}
+.signupStep .navigation .button {
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  vertical-align: middle;
+  width: auto;
+}
+
+.signupStep.offscreen .navigation .button {
+  visibility: hidden;
+}
+
+.signupStep .navigation .button:first-child {
+  left: 0;
+}
+.signupStep .navigation .button:last-child {
+  right: 0;
+}
+.signupStep .navigation .errorcontainer,
+.signupStep .navigation .validation-summary-errors {
+  display: inline-block;
+  max-width: 70%;
+  vertical-align: middle;
+}
+
+.card .cardline.photo .roundedimage {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.popupiconcontainer .popupInstructions {
+  width: 245px;
+}
+
+.embedded #lightbox .verificationForm .visibleCaptchaContainer .visuallabel {
+  display: none;
+}
+
+:not(.embedded) #content .widgetOnly {
+  display: none;
+}
+
+.field-validation-error,
+.validation-summary-errors,
+.signupContainer .errorcontainer {
+  color: #d80000;
+}
+
+input.input-validation-error,
+select.input-validation-error,
+textarea.input-validation-error,
+fieldset.input-validation-error,
+fieldset.input-validation-error legend {
+  background-color: #ffe8e8;
+}
+
+.error-title:focus {
+  outline: none;
+}
+
+.lb_content {
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.lb_close {
+  background: #363636 url("../en-US/images/close_popup.png") no-repeat center center/55% auto;
+  border-radius: 1rem;
+  display: inline-block;
+  height: 1.5rem;
+  position: absolute;
+  right: -0.75rem;
+  top: -0.75rem;
+  vertical-align: top;
+  width: 1.5rem;
+}
+
+.field-validation-valid {
+  display: none;
+}
+
+textarea.input-validation-error {
+  padding: 2px;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+
+.lightbox_overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.infoCard {
+  border: solid #000000 1px;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.leftColumn {
+  float: left;
+}
+
+.collapsed {
+  height: 150px;
+}
+
+.expanded {
+  height: auto;
+}
+
+.ajaxspinnergif,
+.jsdisabled {
+  z-index: 10000;
+}
+
+.error {
+  font-weight: bold;
+  color: #d80000;
+}
+
+.stepContainer .error {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+span.specialtyText a {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+
+span.specialtyText a:hover {
+  text-decoration: underline;
+}
+
+.noShow {
+  visibility: hidden;
+}
+
+div.openingsData.openingsNoData {
+  float: none;
+  position: relative;
+  text-align: center;
+}
+div.openingsData.openingsNoData .errormessage {
+  position: absolute;
+  top: calc(50% - 3rem);
+}
+div.openingsData.openingsNoData .errormessage .nodata {
+  line-height: 1.5rem;
+}
+
+div.openingsData {
+  float: left;
+  height: 450px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+div.proxylistcontainer {
+  width: 100%;
+}
+div.proxylistcontainer form ul.proxyList {
+  padding: 0 3%;
+  text-align: center;
+}
+div.proxylistcontainer form ul.proxyList li > a {
+  display: block;
+}
+
+@media screen and (max-width: 699px) {
+  .embedded div.proxylistcontainer form ul.proxyList li:not(.selected) > a:hover {
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    transition: none;
+  }
+  .embedded div.proxylistcontainer form ul.proxyList li > a {
+    transition: none;
+  }
+}
+ul.proxyList li > a > .proxyPhoto {
+  height: 90px;
+  margin: 0 auto;
+  width: 90px;
+}
+
+form div.proxysection {
+  font-size: 1.2em;
+  margin: 0.5rem 1.5rem;
+  width: calc(100% - 3rem);
+}
+form div.proxysection.nodata {
+  margin: 0.5rem 0;
+}
+
+a.scheduleaction {
+  font-size: 1.2em;
+  padding: 5px 20px;
+  display: inline-block;
+}
+
+div.proxylistcontainer .formbuttons a {
+  margin: 0 0.5rem 0 0;
+}
+div.proxylistcontainer .formbuttons input {
+  height: 2rem;
+  line-height: 1rem;
+  margin: 0;
+}
+
+div.slotDetailsContainer .signup {
+  border-top: 1px solid #cccccc;
+  padding: 0.5rem 0;
+}
+
+.filterControlContainer {
+  margin: -20px 20px 0 0;
+  padding-left: 0.165rem;
+  text-align: right;
+}
+
+.filterFrame {
+  color: #767676;
+  display: inline-block;
+  overflow-y: visible;
+  position: relative;
+  z-index: 1000;
+}
+
+div.optionsgroup + div.optionsgroup + div.optionsgroup {
+  right: 0;
+}
+div.optionsgroup .scrollable {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+div.optionsgroup .leftcol {
+  float: left;
+  margin-right: 24px;
+}
+
+#locationGroup .departmentFilter {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+#locationGroup .departmentDetails {
+  display: inline-block;
+  min-width: 16rem;
+  padding-bottom: 0.25rem;
+}
+#locationGroup .departmentDetails label {
+  color: #000000;
+  display: inline-block;
+  padding-bottom: 0;
+  width: 100%;
+}
+#locationGroup .departmentDetails label span {
+  text-indent: 0;
+}
+#locationGroup .departmentName {
+  display: inline-block;
+  width: calc(100% - 2.2rem - 2px);
+}
+#locationGroup .departmentName.hasDistance {
+  width: calc(100% - 7.2rem - 2px);
+}
+#locationGroup .departmentDistance {
+  color: #767676;
+  display: inline-block;
+  font-size: 0.95rem;
+  text-align: right;
+  vertical-align: top;
+  width: 5rem;
+}
+#locationGroup .departmentAddress {
+  font-size: 0.95rem;
+  padding-left: calc(1.2rem + 2px);
+}
+#locationGroup .actionContainer {
+  position: relative;
+}
+#locationGroup .actionContainer > div {
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  width: auto;
+}
+#locationGroup.onlyone .departmentFilter {
+  width: 100%;
+}
+#locationGroup.onlyone .locationFilter,
+#locationGroup.onlyone .actionContainer {
+  display: none;
+}
+#locationGroup.onlyone .departmentDetails {
+  width: 100%;
+}
+#locationGroup.onlyone .departmentAddress {
+  padding-left: 0;
+}
+
+.signupContainer input::-webkit-input-placeholder {
+  color: transparent;
+}
+.signupContainer input::-moz-placeholder {
+  color: transparent;
+}
+.signupContainer input:-moz-placeholder {
+  color: transparent;
+}
+.signupContainer input:-ms-input-placeholder {
+  color: transparent;
+}
+.signupContainer input:focus::-webkit-input-placeholder {
+  color: #565656;
+}
+.signupContainer input:focus::-moz-placeholder {
+  color: #565656;
+}
+.signupContainer input:focus:-moz-placeholder {
+  color: #565656;
+}
+.signupContainer input:focus:-ms-input-placeholder {
+  color: #565656;
+}
+.signupContainer textarea {
+  font-size: 1em;
+  height: 52px;
+  max-height: 52px;
+  max-width: 136px;
+  min-height: 52px;
+  min-width: 136px;
+  width: 136px;
+}
+.signupContainer .static-payor {
+  display: block;
+  margin: 1rem 0.325rem 0.375rem;
+}
+.signupContainer .pretext {
+  text-align: left;
+}
+.signupContainer br {
+  clear: left;
+}
+
+.loginSignupContainer > .pretext,
+.loginSignupContainer > .posttext {
+  width: 100%;
+}
+
+.loginSignupContainer > .posttext {
+  margin: 0;
+  text-align: center;
+}
+
+.signupContainer > .posttext {
+  clear: both;
+  float: left;
+  margin: 5px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.signupheader.signuponly {
+  text-align: center;
+  width: 100%;
+}
+.signupheader.signuponly .pretext {
+  margin: 3px 0 6px;
+  width: 100%;
+}
+
+.signupContainer > .navigation {
+  text-align: center;
+  width: 100%;
+}
+.signupContainer .navigation .stepindicator {
+  background-color: rgba(36, 111, 181, 0.5);
+  border: 2px solid #246fb5;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  height: 1rem;
+  margin: 0.25rem 0.5rem;
+  vertical-align: top;
+  width: 1rem;
+}
+.signupContainer .navigation .stepindicator.current {
+  background-color: #246fb5;
+  cursor: default;
+}
+.signupContainer .navigation .stepindicator.disabled {
+  background-color: #ffffff;
+  cursor: default;
+}
+.signupStep {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.signupStep.bordered {
+  border: 1px solid #cccccc;
+  padding: 0 9px;
+}
+.signupStep .pretext {
+  margin: 10px 0 0;
+  text-align: center;
+  width: 100%;
+}
+.signupStep .spacer {
+  clear: both;
+  width: 100%;
+}
+body:not(.embedded) .signupStep.userinfo .prevstep {
+  visibility: hidden;
+}
+.signupStep.insurance .sampleimage {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  margin: 0 calc(50% - 157.5px);
+  width: 315px;
+}
+.signupStep.insurance .column > .insuranceNavigation {
+  text-align: center;
+}
+.signupStep.insurance .column > .insuranceNavigation a {
+  display: inline-block;
+  height: 24px;
+  margin: 0.5rem 0.25rem 0;
+  width: 24px;
+  -webkit-touch-callout: none;
+}
+.signupStep.insurance .column > .insuranceNavigation a.disabled {
+  cursor: default;
+}
+.signupStep.insurance .previmage {
+  background-image: url("images/arrow_left.svg");
+}
+.signupStep.insurance .previmage.disabled {
+  background-image: url("images/arrow_left_inactive.png");
+}
+.signupStep.insurance .nextimage {
+  background-image: url("images/arrow_right.svg");
+}
+.signupStep.insurance .nextimage.disabled {
+  background-image: url("images/arrow_right_inactive.png");
+}
+
+.signupStep.credentials .pretext {
+  margin-top: 35px;
+}
+.signupStep.credentials #CAPTCHA {
+  text-align: center;
+  width: 100%;
+}
+.signupStep.credentials #CAPTCHA > div {
+  display: inline-block;
+  float: none;
+  margin: 10px auto 0;
+}
+
+.signupContainer .errorcontainer {
+  display: inline-block;
+  float: none;
+  text-align: center;
+}
+.signupContainer .errorcontainer ul {
+  margin: 10px 0 0;
+  padding: 0;
+}
+.signupContainer .content .validation-summary-errors {
+  display: inline-block;
+  float: none;
+  margin: 10px 0 0;
+}
+.signupContainer .content .validation-summary-errors > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.signupStep.credentials .field-validation-error {
+  display: block;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+div.openingsData .provider {
+  clear: both;
+  margin: 0 5px 10px;
+  text-align: left;
+}
+div.openingsData .provider > * {
+  display: inline-block;
+  vertical-align: top;
+}
+div.openingsData div.providername {
+  display: block;
+}
+div.openingsData div.providername span.providername {
+  color: #246fb5;
+  display: inline-block;
+  font-size: 1.3em;
+  padding: 2px 0 0 10px;
+}
+div.openingsData div.providername span.providername a {
+  color: #246fb5;
+}
+div.openingsData .popupinstructionsicon {
+  color: inherit;
+  cursor: pointer;
+}
+div.openingsData .departmentName {
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.stepContainer.offscreen {
+  visibility: hidden;
+}
+.stepContainer .button.prevMainStep {
+  display: none;
+}
+
+.signupContainer .signupsection .prevMainStep {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.dateTime .time .popupiconcontainer img {
+  width: 1rem;
+  height: 1rem;
+}
+.dateTime .time > * {
+  vertical-align: middle;
+}
+
+#standalone-error .button-container {
+  padding: 1rem 0;
+}
+#standalone-error #back {
+  display: inline-block;
+}
+
+.mobile .stepContainer .cardlist.buttonCards .card {
+  margin-right: 0.5rem !important;
+}
+.mobile .stepContainer .cardlist.buttonCards .card.col-6 {
+  min-width: initial;
+  min-height: initial;
+  width: calc(50% - 12px - 0.01px);
+}
+.mobile .stepContainer .cardlist.buttonCards .card.col-6 a {
+  padding: 1rem 0.25rem;
+}
+.mobile .stepContainer .header .stepNumber {
+  height: auto;
+  min-height: 1.5rem;
+}
+.mobile .stepContainer .error {
+  white-space: normal;
+}
+.mobile .stepContainer .locationList.cardlist.buttonCards .zipSearch .button {
+  width: auto;
+  margin: 0 0 0 0.5rem;
+}
+.mobile .stepContainer .locationList.cardlist.buttonCards .card a, .mobile .stepContainer .locationList.cardlist.buttonCards .card label {
+  padding: 0.75rem 0.5rem;
+}
+.mobile .stepContainer .specialtyList.cardlist.buttonCards img.stepIcon {
+  min-height: 0;
+  min-width: 0;
+}
+.mobile .stepContainer .filterButtonContainer .filterControlsParent .dateContainerParent .dateRangeForm {
+  min-width: 85%;
+}
+.mobile .stepContainer .filterControl {
+  display: none;
+}
+.mobile .stepContainer div.openingsData .card {
+  margin: 0.25rem 0.5% !important;
+}
+.mobile .stepContainer div.openingsData .card .cardline.photo + .cardline.partial {
+  width: 100%;
+}
+.mobile .stepContainer .subslotslist,
+.mobile .stepContainer div.moreslots {
+  display: inline !important;
+  position: static !important;
+}
+.mobile .stepContainer .slotslist .moreslots.hover {
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+.mobile .stepContainer div.openingsData .slotslist a.slotdetailaction {
+  width: auto;
+  min-width: 30%;
+  margin: 0 7px 10px 0 !important;
+  height: auto;
+  line-height: 1rem;
+  padding: 0.32rem 2px;
+}
+.mobile .stepContainer .subslotslist {
+  width: auto !important;
+  height: auto;
+  max-width: none;
+  margin: 0 !important;
+}
+.mobile .stepContainer div.moreslots .slotdetailaction,
+.mobile .stepContainer div.moreslots .slotdetailaction.dismissed {
+  display: inline-block !important;
+}
+.mobile .stepContainer .moreslotslabel {
+  display: none !important;
+}
+.mobile .stepContainer .slotDetailsContainer .comments, .mobile .stepContainer .slotDetailsContainer .hasDepartmentPhoto, .mobile .stepContainer .slotDetailsContainer .departmentPhoto, .mobile .stepContainer .slotDetailsContainer .dateTime, .mobile .stepContainer .slotDetailsContainer .address {
+  display: block;
+  width: 100%;
+}
+.mobile .stepContainer .slotDetailsContainer .departmentPhoto img {
+  max-width: 100%;
+}
+
+.md_openscheduling_index #lightbox {
+  left: 50%;
+}
+
+#lightbox {
+  width: auto;
+  max-width: 60%;
+}
+#lightbox .visibleCaptchaContainer {
+  display: flex;
+  flex-direction: column;
+}
+#lightbox .visibleCaptchaContainer .__captchaCore {
+  width: auto;
+  margin: 0 auto;
+  margin-top: 0.75rem;
+}
+#lightbox .visibleCaptchaContainer .captchaPretext {
+  margin-bottom: 0.75rem;
+}
+#lightbox .visibleCaptchaContainer .demoCaptcha,
+#lightbox .visibleCaptchaContainer .demoCaptchaSubmit {
+  width: 300px;
+  align-self: center;
+}
+#lightbox .visibleCaptchaContainer .closeLightbox {
+  background-image: url("../en-US/images/close_popup.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  top: -8px;
+  right: -14px;
+}
+@media screen and (max-width: 768px) {
+  #lightbox .visibleCaptchaContainer .closeLightbox {
+    right: 0;
+  }
+}
+#lightbox .visibleCaptchaContainer .dummyVoiceOveriOSButton {
+  opacity: 0;
+  height: 1px;
+}
+#lightbox .verificationForm .visibleCaptchaContainer .demoCaptcha {
+  align-self: flex-start;
+}

@@ -1,0 +1,41 @@
+SET SEARCH_PATH TO projectschema;
+
+--queries for q2: 
+--How does the housing price index fluctuate with the unemployment rate?
+
+--Get a dataview with housingprince index and unemployment rate
+drop view if exists dataview2 cascade;
+
+create view dataview2
+as 
+select index, rate from
+unemploymentrt natural left join housingpi;
+
+
+--Get the correlation between housingprice index and unemployment rate
+drop view if exists corr2 cascade;
+create view corr2
+as
+select corr(index, rate) from
+dataview2;
+
+--Explore more, if they are linear related, what is the linear regression model?
+drop view if exists regression2 cascade;
+create view regression2
+as
+select
+((Sy * Sxx) - (Sx * Sxy))
+    / ((N * (Sxx)) - (Sx * Sx)) AS intercept,
+    ((N * Sxy) - (Sx * Sy))
+    / ((N * Sxx) - (Sx * Sx)) AS slope,
+    ((N * Sxy) - (Sx * Sy))
+    / SQRT(
+        (((N * Sxx) - (Sx * Sx))
+         * ((N * Syy - (Sy * Sy))))) AS r
+from
+(select sum(rate) as Sx, Sum(index) as Sy,
+sum(rate*rate) as Sxx,
+sum(rate*index) as Sxy,
+sum(index*index) as Syy,
+count(*) as N
+from dataview2) as sumdata;

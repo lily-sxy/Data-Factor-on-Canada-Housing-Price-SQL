@@ -1,0 +1,43 @@
+
+SET SEARCH_PATH TO projectschema;
+
+--queries for q1: 
+--Are housing price index and household debt-to-income in a positive correlation?
+
+--create a view with housingprice index and 
+--household-debt-to-income ratio
+drop view if exists dataview cascade;
+
+create view dataview
+as
+select index, ratio from
+householddti natural left join housingpi;
+--check the correlation
+drop view if exists corr cascade;
+
+create view corr
+as
+select corr(index, ratio) from
+dataview;
+
+--further investigate: check their linear regression model:
+drop view if exists regression cascade;
+
+create view regression
+as
+select 
+((Sy * Sxx) - (Sx * Sxy))
+    / ((N * (Sxx)) - (Sx * Sx)) AS intercept,
+    ((N * Sxy) - (Sx * Sy))
+    / ((N * Sxx) - (Sx * Sx)) AS slope,
+    ((N * Sxy) - (Sx * Sy))
+    / SQRT(
+        (((N * Sxx) - (Sx * Sx))
+         * ((N * Syy - (Sy * Sy))))) AS r
+from
+(select sum(ratio) as Sx, Sum(index) as Sy,
+sum(ratio*ratio) as Sxx,
+sum(ratio*index) as Sxy,
+sum(index*index) as Syy,
+count(*) as N
+from dataview) as sumdata;
